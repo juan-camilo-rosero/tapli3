@@ -123,6 +123,451 @@ p::selection, a::selection, h1::selection, h2::selection, input::selection, butt
     opacity: .5;
 }
 
+/*Create*/
+
+header{
+    width: 100vw;
+    height: 15vh;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: var(--secondary-color);
+    margin-right: 1rem;
+}
+
+header img{
+    height: 3rem;
+}
+
+
+/*Main*/
+
+main{
+    width: 100vw;
+    background-color: var(--secondary-color);
+    min-height: 85vh;
+    border-radius: 2rem 2rem 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Hero section*/
+
+.landing-content{
+    transition: .5s;
+}
+
+#hero-section{
+    height: 85vh;
+    border-bottom: var(--primary-color) .2rem solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+}
+
+#hero-section h2{
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    text-align: center;
+    width: 75vw;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+#hero-section b{
+    font-weight: 900;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#hero-section button, #hero-section a, .contact-btn{
+    width: calc(75vw - 3rem);
+    padding: 1rem 1.5rem;
+    border-radius: 50rem;
+    border: none;
+    font-size: 2rem;
+    margin: 2rem 0;
+    cursor: pointer;
+}
+
+#hero-section .try-now, .contact-btn{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+#hero-section .see-more{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: .2rem solid var(--primary-color);
+    text-align: center;
+    width: calc(75vw - 6rem);
+    text-decoration: none;
+}
+
+/*How it works*/
+
+#how-it-works{
+    padding: 4rem 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: var(--primary-color) .2rem solid;
+    width: 100vw;
+}
+
+#how-it-works h2, #contact h2{
+    width: 75vw;
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 4rem;
+}
+
+#how-it-works p{
+    width: 75vw;
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--primary-color);
+    margin-bottom: 4rem;
+}
+
+/*Contact*/
+
+#contact{
+    width: 100vw;
+    padding: 4rem 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-btn{
+    font-size: 1.8rem;
+}
+
+/*Name & Mail*/
+
+.name, .mail{
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.name h2, .mail h2{
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    text-align: center;
+    width: 75vw;
+    font-weight: 400;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+}
+
+.name input, .mail input{
+    width: calc(75vw - 3rem);
+    padding: 1rem 1.5rem;
+    font-size: 2rem;
+    border: .2rem solid var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.name-continue, .mail-continue{
+    width: 75vw;
+    background-color: var(--primary-color);
+    font-size: 2rem;
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+}
+
+.mail form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*Menu section*/
+
+.menu-sec{
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.return, .return-menu{
+    background-color: transparent;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 3rem;
+}
+
+.menu-title{
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-weight: 400;
+    width: 75vw;
+    text-align: center;
+    border-bottom: var(--primary-color) solid .2rem;
+    padding: 3rem 12.5vw;
+}
+
+.add-cat, .add-product{
+    color: var(--primary-color);
+    width: 75vw;
+    padding: 1rem 0;
+    font-size: 1.7rem;
+    border: var(--primary-color) solid .2rem;
+    background-color: var(--secondary-color);
+    border-radius: 5rem;
+    margin-top: 4rem;
+    cursor: pointer;
+}
+
+.add-cat{
+    margin-bottom: 3rem;
+}
+
+.create-menu{
+    color: var(--secondary-color);
+    margin-bottom: 3rem;
+    width: 75vw;
+    padding: 1rem 0;
+    font-size: 1.7rem;
+    background-color: var(--primary-color);
+    border-radius: 5rem;
+    margin-top: 1rem;
+    opacity: 0.5;
+    cursor: pointer;
+    border: none;
+}
+
+.active{
+    opacity: 1;
+}
+
+.cat-div{
+    width: 100vw;
+    padding: 2rem 0;
+    border-bottom: var(--primary-color) solid .2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.delete-cat{
+    width: 2rem;
+    margin-left: 80vw;
+    cursor: pointer;
+}
+
+.cat-title{
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    padding: 1rem;
+    font-weight: 800;
+    padding-bottom: 4rem;
+}
+
+/*Products*/
+
+.product-div{
+    padding: 3rem 0;
+    border-top: .15rem solid var(--third-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100vw;
+}
+
+.product-div-title{
+    font-size: 1.8rem;
+    color: black;
+    text-align: center;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.product-div-desc{
+    font-size: 1.5rem;
+    color: var(--third-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+}
+
+.product-div-price{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.delete-product{
+    width: 2rem;
+    cursor: pointer;
+}
+
+
+/*Pop-up*/
+
+.popup-div{
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 100;
+    display: flex;
+    transition: .2s;
+    justify-content: center;
+}
+
+.popup{
+    width: 90vw;
+    min-height: 80vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    border-radius: 3rem;
+    background-color: var(--secondary-color);
+}
+
+.popup-close{
+    width: 3.5rem;
+    height: 3.5rem;
+    border: var(--primary-color) solid .2rem;
+    border-radius: 5rem;
+    margin-left:calc(90vw - 5rem);
+    margin-top: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-close img{
+    width: 40%;
+}
+
+.popup-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(80vh - 6rem);
+}
+
+.popup h2{
+    width: 90%;
+    color: var(--primary-color);
+    font-size: 2.3rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.popup p{
+    width: 90%;
+    color: var(--third-color);
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.category-input{
+    margin-top: 4rem;
+    width: 70%;
+    padding: 1rem 5%;
+    border: var(--primary-color) solid .2rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.product-input{
+    margin-top: 1.5rem;
+    width: 70%;
+    padding: 1rem 5%;
+    border: var(--primary-color) solid .2rem;
+    font-size: 1.5rem;
+    border-radius: 5rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.product-title{
+    font-size: 1.75rem;
+}
+
+.popup button{
+    width: 80%;
+    padding: 1rem;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border-radius: 5rem;
+    margin-top: 3rem;
+    border: none;
+    cursor: pointer;
+}
+
+/*Thanks*/
+
+.thanks h2{
+    text-align: center;
+    padding: 0 1.5rem 6rem 1.5rem;
+    font-weight: 400;
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.center-content{
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.thanks a{
+    text-align: center;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-decoration: none;
+    border-radius: 5rem;
+    font-size: 2rem;
+}
+
 @media (min-width: 1000px){
     /*Landing*/
 
@@ -145,5 +590,216 @@ p::selection, a::selection, h1::selection, h2::selection, input::selection, butt
 
     .qr-code:hover{
         cursor: pointer;
+    }
+
+    /*Header*/
+
+    header h1{
+        font-size: 2.25rem;
+    }
+
+    header img{
+        width: 2rem;
+        height: auto;
+    }
+
+    /*Hero section*/
+
+    #hero-section h2{
+        font-size: 3.5rem;
+        width: 70vw;
+        margin-bottom: 5rem;
+    }
+
+    .buttons{
+        flex-direction: row;
+        width: 75vw;
+        justify-content: space-around;
+    }
+
+    #hero-section button, #hero-section a, #contact button{
+        width: 25vw;
+        font-size: 2.5rem;
+    }
+
+    .see-more{
+        width: 25vw !important;
+    }
+
+    /*How it works*/
+
+    #how-it-works h2, #contact h2{
+        font-size: 3.5rem;
+    }
+
+    #how-it-works p{
+        font-size: 2.5rem;
+        font-weight: 300;
+    }
+
+    /*Contact*/
+
+    #contact button{
+        font-size: 2.5rem;
+    }
+
+    /*Name*/
+
+    .name h2, .mail h2{
+        font-size: 2.5rem;
+    }
+
+    .name input, .mail input{
+        width: 40vw;
+        padding: .75rem 2rem;
+    }
+
+    .name-continue, .mail-continue{
+        width: 23vw;
+        transition: .3s;
+        padding: .75rem 2rem;
+        border: var(--primary-color) solid .2rem;
+    }
+
+    .name-continue:hover, .mail-continue:hover{
+        width: 26vw;
+    }
+
+    /*Menu sec*/
+    
+    .menu-title{
+        width: 50vw;
+        border-bottom: var(--primary-color) solid .2rem;
+        padding: 3rem 0;
+    }
+    
+    .add-cat, .add-product{
+        width: 25vw;
+        padding: .75rem 0;
+        font-size: 1.75rem;
+        border-radius: 15rem;
+        transition: .3s;
+    }
+
+    .add-cat:hover, .add-product:hover{
+        width: 28vw;
+    }
+    
+    .create-menu{
+        width: 25vw;
+        padding: .75rem 0;
+        font-size: 1.75rem;
+        border-radius: 5rem;
+        border: var(--primary-color) .2rem solid;
+        transition: .3s;
+    }
+    
+    .active:hover{
+        width: 28vw;
+    }
+    
+    .cat-div{
+        width: 50vw;
+        padding: 4rem 0;
+        border-bottom: var(--primary-color) solid .15rem;
+    }
+    
+    .delete-cat{
+        width: 2rem;
+        margin-left: calc(50vw - 2rem);
+    }
+    
+    .cat-title{
+        font-size: 2.5rem;
+        margin-top: -3.25rem;
+        padding-bottom: 2rem;
+    }
+
+    /*Products*/
+
+    .product-div{
+        padding: 4rem 0 10rem 0;
+        border-top: none;
+        width:50vw;
+        overflow: hidden;
+    }
+
+    .delete-product{
+        width: 2rem;
+        cursor: pointer;
+        margin-top: -12rem;
+        margin-left: calc(35vw - 2rem);
+    }
+
+    /*Pop-up*/
+
+    .popup{
+        width: 75vw;
+        border-radius: 3rem;
+        overflow-y: scroll;
+    }
+
+    .popup-close{
+        margin-left:calc(75vw - 5rem);
+    }
+
+    .popup-close img{
+        width: 40%;
+        transition: .3s;
+    }
+
+    .popup-close img:hover{
+        width: 45%;
+    }
+
+    .popup h2{
+        width: 80%;
+        margin-top: 0;
+    }
+
+    .popup p{
+        width: 80%;
+        font-size: 1.3rem;
+    }
+
+    .category-input{
+        width: 40%;
+        padding: .75rem 5%;
+        font-size: 1.75rem;
+    }
+
+    .product-input{
+        width: 40%;
+        padding: .75rem 5%;
+        font-size: 1.5rem;
+    }
+
+    .popup button{
+        width: 35%;
+        padding: .75rem 5%;
+        font-size: 1.75rem;
+        transition: .3s;
+    }
+
+    .popup button:hover{
+        width: 40%;
+    }
+
+    /*Thanks*/
+
+    .thanks h2{
+        padding-bottom: 3.5rem;
+        font-size: 2.75rem;
+        line-height: 5rem;
+    }
+
+    .thanks a{
+        padding: 1rem 3rem;
+        font-size: 1.75rem;
+        transition: .3s;
+    }
+
+    .thanks a:hover{
+        padding: 1rem 4rem;
     }
 }
