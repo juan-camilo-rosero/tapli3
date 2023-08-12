@@ -41,7 +41,7 @@ export function createCategory(btn, popup, input, createDiv) {
         let menu = getData("menu")
         if($input.vale != ""){
             let key = $input.value.toLowerCase()
-            key = key.replace(/[^a-z0-9 ]/g, '')
+            key = key.replace(/[^a-z0-9áéíóúÁÉÍÓÚ ]/gi, '')
             key = key.replace(/\s/g, '_')
 
             if(Object.prototype.hasOwnProperty.call(menu, key)){
@@ -93,7 +93,7 @@ export function loadCat(){
     
             $div.classList.add("cat-div")
 
-            $div.setAttribute("data-category", option.replace(" ", "_"))
+            $div.setAttribute("data-category", option.replace(/ /g, "_"))
     
             $delete.setAttribute("src", "assets/delete.png")
             $delete.setAttribute("alt", "Borrar categoría")
@@ -129,23 +129,16 @@ export function createProduct(btn) {
     $popup = d.querySelector(".popup-div")
 
     $btn.addEventListener("click", e => {
-        const category = $popup.getAttribute("data-category").toLowerCase(),
-        passCategory = $popup.getAttribute("data-category"), // Existe porque si paso category en la otra función, da error
+        const category = $popup.getAttribute("data-category").toLowerCase().replace(/ /g, "_"),
+        passCategory = $popup.getAttribute("data-category").replace(/ /g, "_"), // Existe porque si paso category en la otra función, da error
         $name = d.querySelector(".product-name"),
         $price = d.querySelector(".product-price"),
         $desc = d.querySelector(".product-desc"),
         menu = getData("menu"),
         index = menu.options_names.indexOf(category),
         objName = menu.options_names[index]
-        console.log(menu.options_names);
-
-        console.log(index);
-        console.log(category);
-        console.log(objName);
 
         if($name.value != "" && $price.value != ""){
-            console.log(menu);
-            console.log(menu[objName].options);
             menu[objName].options.push($name.value)
             menu[objName].prices.push($price.value)
             menu[objName].descriptions.push($desc.value)
@@ -168,7 +161,7 @@ export function loadProducts() {
             catOptions = cat.options,
             catPrices = cat.prices,
             catDescriptions = cat.descriptions,
-            $productsDiv = d.querySelector(`div[data-category=${menu.options[index].replace(" ", "_")}] .products`)
+            $productsDiv = d.querySelector(`div[data-category=${menu.options[index].replace(/ /g, "_")}] .products`)
             try {
                 catOptions.forEach((opt, i) => {
                     const $productDiv = d.createElement("div"),
@@ -214,9 +207,9 @@ export function deleteProduct(e) {
     category = $btnDiv.parentNode.parentNode.getAttribute("data-category"),
     name = $btnDiv.firstChild.textContent,
     menu = getData("menu"),
-    indexCat = menu.options.indexOf(category),
-    obj = menu[menu.options_names[indexCat]],
-    indexProduct = obj.options.indexOf(name)
+    indexCat = menu.options_names.indexOf(category.toLowerCase()),
+    obj = menu[menu.options_names[indexCat]]
+    const indexProduct = obj.options.indexOf(name)
 
     menu[menu.options_names[indexCat]].options.splice(indexProduct, 1)
     menu[menu.options_names[indexCat]].prices.splice(indexProduct, 1)

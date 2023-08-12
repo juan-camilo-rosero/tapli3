@@ -38,11 +38,7 @@ export function returnPage() {
     $btn = d.querySelector(".return")
 
     $btn.addEventListener("click", e => {
-        if ($menuSec.classList.contains("hidden")){
-            console.log("uwu");
-        }
-
-        else{
+        if (!$menuSec.classList.contains("hidden")){
             $menuSec.classList.add("hidden")
         setTimeout(() => {
             $menuSec.classList.add("none")
@@ -150,7 +146,7 @@ export function createCatDiv(name, catName) {
     
     $div.classList.add("cat-div")
 
-    $div.setAttribute("data-category", catName.replace(" ", "_"))
+    $div.setAttribute("data-category", catName.replace(/ /g, "_"))
 
     $delete.setAttribute("src", "assets/delete.png")
     $delete.setAttribute("alt", "Borrar categoría")
@@ -193,7 +189,7 @@ export function createProductPopup(btn) {
     setTimeout(() => $popup.classList.remove("hidden")
     , 100);
 
-    $popup.setAttribute("data-category", title.replace(" ", "_"))
+    $popup.setAttribute("data-category", title.replace(/ /g, "_"))
 }
 
 export function createProductBtn(btn) {
