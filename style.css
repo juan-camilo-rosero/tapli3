@@ -963,6 +963,7 @@ main{
     }
     
     .product{
+        width: auto;
         padding: 4rem 0;
         border: none;
     }

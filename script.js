@@ -1,30 +1,7 @@
 import { createOptions, returnMenu, showDishes } from "./menu.js"
 
 const d = document,
-menu = {
-    options:["Entradas", "Platos fuertes", "Bebidas", "Postres"],
-    options_names: ["entradas", "platos_fuertes", "bebidas", "postres"],
-    entradas: {
-        options: ["Empanaditas de coctel", "Arepa de Choclo", "Ensalada de frutas", "Chorizo con arepa"],
-        descriptions: ["de pollo o de carne", "con queso derretido", "con helado", "la receta tradicional"],
-        prices: ["$9.000", "$12.000", "$10.000", "$8.000"]
-    },
-    platos_fuertes: {
-        options: ["Punta de anca", "Milanesa", "Lomo salteado", "Pollo a la parrilla"],
-        descriptions: ["jugosa y tierna", "empanizada y dorada", "salteado con vegetales", "sazonado a la perfección"],
-        prices: ["$36.000", "$28.000", "$30.000", "$26.000"]
-    },
-    bebidas: {
-        options: ["Refresco de limón", "Jugo de naranja", "Agua mineral", "Cerveza artesanal"],
-        descriptions: ["natural y refrescante", "recién exprimido", "con gas", "elaborada localmente"],
-        prices: ["$3.000", "$4.000", "$2.000", "$6.000"]
-    },
-    postres: {
-        options: ["Tarta de manzana", "Helado de vainilla", "Flan de caramelo", "Brownie con helado"],
-        descriptions: ["con crujiente masa", "cremoso y suave", "hecho en casa", "caliente y frío a la vez"],
-        prices: ["$5.000", "$6.000", "$4.000", "$7.000"]
-    }        
-}
+menu = {"name":"Donde los hermanos","mazorcadas":{"options":["Sencilla","Doble","Costillas BBQ"],"descriptions":["maíz tierno, pollo en salsa BBQ, chorizo a la parrilla, queso doble crema y tocineta","el doble de grande de la sencilla con un poquito más de proteína","250gr de costillas BBQ con 100 gr de papa criolla"],"prices":["$12.000","$24.000","$12.000"]},"options":["Mazorcadas","Bebidas","Hamburguesas"],"options_names":["mazorcadas","bebidas","hamburguesas"],"bebidas":{"options":["Coca-Cola en lata","Té","Agua"],"descriptions":["","",""],"prices":["$2.000","$2.000","$2.000"]},"hamburguesas":{"options":["Tradicional","Tradicional Doble","Ranchera","Combo con papas"],"descriptions":["Pan artesanal / tortilla / arepa, 125gr de carne, queso cheddar, tocineta, huevo de codorniz, papa cabello de ángel, cebolla caramelizada y tomate","Pan artesanal / tortilla / arepa, 125gr de carne X2, queso cheddar X2, tocineta X2, huevo de codorniz, papa cabello de ángel, cebolla caramelizada y tomate","Pan artesanal / tortilla / arepa, chorizo santarrosano, 125gr de carne, queso cheddar, jalapeños, huevo de codorniz, papa cabello de ángel y cebolla caramelizada",""],"prices":["$11.000","$16.000","$13.000","$5.000 adicionales"]}}
 
 createOptions(menu)
 showDishes(menu)
